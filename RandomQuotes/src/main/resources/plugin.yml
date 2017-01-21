@@ -1,0 +1,21 @@
+name: RandomQuotes
+main: io.github.ratemynoot.randomquotes.RandomQuotes
+description: Injects random Weeksly quotes into chat when invoked.
+author: mrhappyoz
+version: 0.0.2-SNAPSHOT
+commands:
+   randomquote:
+      aliases: [rq] 
+      description: Injects random quotes into chat when invoked.
+      usage: Simply type /randomquote or /rq for a famous and heart-warming quote.
+      permission: randomquote.getquote
+      permission-message: You don't have <permission>
+ 
+permissions:
+   randomquotes.*:
+     description: Gives access to all randomquote commands
+     children:
+       randomquotes.getquote: true
+   randomquotes.getquote:
+     description: Allows you send random quotes to the server.
+     default: true
